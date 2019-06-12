@@ -1,4 +1,5 @@
 // Vendors
+//= require_tree .
 var Vue = require('vue');
 window.Vue = Vue;
 

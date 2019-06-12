@@ -9,11 +9,11 @@
     <!-- END favicon -->
 
     <title>
-      <%= (content_for?(:title) ? "#{yield(:title)} | " : '').concat('SAPSB') %>
+      <%= (content_for?(:title) ? "#{yield(:title)} | " : '').concat('CONTROL') %>
     </title>
     <%= csrf_meta_tags %>
     <%= stylesheet_webpack_asset 'application', media: 'all' %>
-    <script src="https://use.fontawesome.com/81533e5f2e.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

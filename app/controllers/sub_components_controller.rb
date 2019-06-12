@@ -2,7 +2,6 @@ class SubComponentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_component
   before_action :set_sub_component, only: [:show, :edit, :update, :destroy]
-  cache_sweeper :sub_component_sweeper
 
   def index
     @sub_components = @component.sub_components

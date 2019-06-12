@@ -1,7 +1,6 @@
 class ComponentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_component, only: [:edit, :update, :destroy]
-  cache_sweeper :component_sweeper
 
   def index
     @components = Component.all

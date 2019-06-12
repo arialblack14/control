@@ -4,7 +4,6 @@ class AdditionsController < ApplicationController
   before_action :set_addition, only: [:edit, :update, :destroy]
   before_action :set_current_query, only: [:edit, :index, :new]
   before_action :set_current_page, only: [:edit, :index, :new]
-  cache_sweeper :addition_sweeper
 
   def index
     @additions = @contract.additions.all

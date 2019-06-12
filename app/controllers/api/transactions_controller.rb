@@ -1,7 +1,6 @@
 module API
   class TransactionsController < ApplicationController
     before_action :authenticate_user!
-    cache_sweeper :transaction_sweeper
 
     def create
       @base = params[:polymorphic_type].classify.constantize.find(params[:polymorphic_id])

@@ -2,8 +2,6 @@ class ContractsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_contract, only: [:edit, :show, :update, :destroy]
   before_action :set_current_page, only: [:edit, :show, :new]
-  cache_sweeper :contract_sweeper
-  caches_action :index, :if => Proc.new { params[:page].nil? && session[:contracts_hash].empty? && flash.empty?}
 
   def index
     unless session[:contracts_hash].blank?

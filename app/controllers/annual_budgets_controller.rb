@@ -1,7 +1,6 @@
 class AnnualBudgetsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_annual_budget, only: [:edit, :update, :destroy]
-  cache_sweeper :annual_budget_sweeper
 
   def index
     unless params[:query]

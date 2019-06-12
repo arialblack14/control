@@ -3,7 +3,6 @@ class ContractorsController < ApplicationController
   before_action :set_contractor, only: [:edit, :show, :update, :destroy]
   before_action :set_current_query, only: [:edit, :show, :new]
   before_action :set_current_page, only: [:edit, :show, :new]
-  cache_sweeper :contractor_sweeper
 
   def index
     unless params[:query]

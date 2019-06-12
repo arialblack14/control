@@ -2,8 +2,6 @@ class PaymentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_payment, only: [:edit, :update, :destroy, :expenditures, :withholdings, :concile_payment, :update_payment_conciliation]
   before_action :set_current_page, only: [:new, :edit, :expenditures, :withholdings, :concile_payment]
-  cache_sweeper :payment_sweeper
-  caches_action :index, :if => Proc.new { params[:page].nil? && session[:payments_hash].empty? && flash.empty?}
 
   def index
     unless session[:payments_hash].blank?

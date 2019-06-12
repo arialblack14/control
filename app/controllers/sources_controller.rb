@@ -3,7 +3,6 @@ class SourcesController < ApplicationController
   before_action :set_source, only: [:edit, :show, :update, :destroy]
   before_action :set_current_query, only: [:edit, :show, :new]
   before_action :set_current_page, only: [:edit, :show, :new]
-  cache_sweeper :source_sweeper
 
   def index
     @sources = Source.search(params[:query]).order(:name).page params[:page]

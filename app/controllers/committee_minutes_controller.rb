@@ -2,7 +2,6 @@ class CommitteeMinutesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_annual_budget
   before_action :set_minute, only: [:edit, :update, :destroy]
-  cache_sweeper :committee_minute_sweeper
 
   def index
     unless params[:query]

@@ -2,7 +2,6 @@ class AvaiabilityLettersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_committee_minute, :set_annual_budget
   before_action :set_letter, only: [:edit, :update, :destroy]
-  cache_sweeper :avaiability_letter_sweeper
 
   def index
     unless params[:query]

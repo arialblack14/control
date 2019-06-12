@@ -60,7 +60,7 @@
             <div class="row">
               <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="form-group">
-                  <label for="namefield">Fecha de revision</label>
+                  <label for="namefield">Proveedor</label>
                   <span v-show="isValidField('abbreviation')" class='required-field'>*</span>
                   <%= f.collection_select(
                     :user_id,
@@ -80,7 +80,7 @@
               </div>
               <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="form-group">
-                  <label for="inputs">Acta de comité</label>
+                  <label for="inputs">Insumos</label>
                   <span v-show="isValidField('input_ids')" class='required-field'>*</span>
                   <select multiple id="input_list" class="form-control select2 input-sm" v-model="selected_input" data-fieldname= "selected_input">
                     <option label=" "></option>

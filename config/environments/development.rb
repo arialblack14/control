@@ -28,7 +28,7 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
 
-  config.active_job.queue_adapter = :sidekiq
+  # config.active_job.queue_adapter = :sidekiq
 
   config.action_mailer.perform_deliveries = true
 

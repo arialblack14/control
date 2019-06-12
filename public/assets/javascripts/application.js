@@ -111,6 +111,12 @@
 	__webpack_require__(252);
 	__webpack_require__(253);
 	__webpack_require__(254);
+	__webpack_require__(263);
+	__webpack_require__(264);
+	__webpack_require__(265);
+	__webpack_require__(266);
+	__webpack_require__(267);
+	__webpack_require__(268);
 	
 	// Datepicker
 	$('.datepicker').datepicker({
@@ -74208,12 +74214,164 @@
 /* 260 */,
 /* 261 */,
 /* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */,
-/* 268 */,
+/* 263 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	if (document.getElementById("provider_form")) {
+	  new Vue({
+	    el: '#provider_form',
+	
+	    methods: {
+	      isValidField: function isValidField(field_name) {
+	        return this.fields.clean("provider\[" + field_name + "\]") || this.errors.has("provider\[" + field_name + "\]");
+	      }
+	    },
+	
+	    mounted: function mounted() {
+	      this.$nextTick(function () {
+	        this.$validator.validateAll();
+	      });
+	    }
+	  });
+	}
+
+/***/ },
+/* 264 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	if (document.getElementById("input_form")) {
+	  new Vue({
+	    el: '#input_form',
+	
+	    methods: {
+	      isValidField: function isValidField(field_name) {
+	        return this.fields.clean("provider\[" + field_name + "\]") || this.errors.has("provider\[" + field_name + "\]");
+	      }
+	    },
+	
+	    mounted: function mounted() {
+	      this.$nextTick(function () {
+	        this.$validator.validateAll();
+	      });
+	    }
+	  });
+	}
+
+/***/ },
+/* 265 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	if (document.getElementById("work_type_form")) {
+	  new Vue({
+	    el: '#work_type_form',
+	
+	    methods: {
+	      isValidField: function isValidField(field_name) {
+	        return this.fields.clean("contractor_type\[" + field_name + "\]") || this.errors.has("contractor_type\[" + field_name + "\]");
+	      }
+	    },
+	
+	    mounted: function mounted() {
+	      this.$nextTick(function () {
+	        this.$validator.validateAll();
+	      });
+	    }
+	  });
+	}
+
+/***/ },
+/* 266 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	if (document.getElementById("work_form")) {
+	  new Vue({
+	    el: '#work_form',
+	
+	    methods: {
+	      isValidField: function isValidField(field_name) {
+	        return this.fields.clean("contract_type\[" + field_name + "\]") || this.errors.has("contract_type\[" + field_name + "\]");
+	      }
+	    },
+	
+	    mounted: function mounted() {
+	      this.$nextTick(function () {
+	        this.$validator.validateAll();
+	      });
+	    }
+	  });
+	}
+
+/***/ },
+/* 267 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	if (document.getElementById("inventory_form")) {
+	  new Vue({
+	    el: '#inventory_form',
+	
+	    methods: {
+	      isValidField: function isValidField(field_name) {
+	        return this.fields.clean("provider\[" + field_name + "\]") || this.errors.has("provider\[" + field_name + "\]");
+	      }
+	    },
+	
+	    mounted: function mounted() {
+	      this.$nextTick(function () {
+	        this.$validator.validateAll();
+	      });
+	    }
+	  });
+	}
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	if (document.getElementById("purchase_order_form")) {
+	  window.axios = __webpack_require__(8);
+	  new Vue({
+	    el: '#purchase_order_form',
+	
+	    data: {
+	      provider: '',
+	      inputs: [],
+	      selected_input: []
+	    },
+	
+	    methods: {
+	      isValidField: function isValidField(field_name) {
+	        return this.fields.clean("provider\[" + field_name + "\]") || this.errors.has("provider\[" + field_name + "\]");
+	      },
+	      fetchInputs: function fetchInputs() {
+	        var _this = this;
+	
+	        axios.get('/api/inputs/' + this.provider).then(function (response) {
+	          return _this.inputs = response.data;
+	        });
+	      }
+	    },
+	
+	    mounted: function mounted() {
+	      this.$nextTick(function () {
+	        this.$validator.validateAll();
+	      });
+	    }
+	  });
+	}
+
+/***/ },
 /* 269 */
 /***/ function(module, exports) {
 

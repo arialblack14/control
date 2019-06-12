@@ -132,5 +132,5 @@ Rails.application.routes.draw do
     post :stop_impersonating, on: :collection
   end
 
-  root 'dashboard#index'
+  root 'works#index'
 end

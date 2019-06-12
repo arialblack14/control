@@ -89,26 +89,10 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { host: Rails.application.secrets.mailer_host }
 
 
-  config.action_mailer.default_options = { from: "sistemas@pdanortedesantander.com"}
-
-  # config.action_mailer.sendmail_settings = {
-  #   :address => "smtp.mailgun.org",
-  #   :port => "587",
-  #   :user_name => "postmaster@mail.silumin.co",
-  #   :password => "375f6ec05424c161d7afabde4db2ee56-7caa9475-f285932c",
-  #   :authentication => "plain",
-  #   :domain => 'mail.silumin.co',
-  #   :enable_starttls_auto => true
-  # }
-  # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => "agua.pdanortedesantander.com" }
-  # config.action_mailer.delivery_method = :sendmail
-
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-    api_key: '975012b936f0e7ca54e79a0ee0c34b1f-1b65790d-cf5067b1',
-    domain: 'mail.silumin.co',
-  }
+  config.action_mailer.default_url_options = { :host => "fathomless-plains-34877.herokuapp.com" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
 
   # config.action_mailer.smtp_settings = {
   #   address: Rails.application.secrets.mailer_address,

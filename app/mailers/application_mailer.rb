@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'sistemas@pdanortedesantander.com'
+  default from: 'control@control.com'
   layout 'mailer'
 end

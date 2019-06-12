@@ -36,16 +36,16 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost:3000'  }
 
-  config.action_mailer.default_options = { from: "sistemas@pdanortedesantander.com"}
+  config.action_mailer.default_options = { from: "control@control.com"}
 
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.sendmail_settings = {
-    :address => "smtp.mailgun.org",
+    :address => "smtp.gmail.com",
     :port => "587",
-    :user_name => "sistemas@mail.silumin.co",
-    :password => "375f6ec05424c161d7afabde4db2ee56-7caa9475-f285932c",
+    :domain => "example.com",
+    :user_name => "cristianleonardopenarandamora@gmail.com",
+    :password => "cristianleonardo",
     :authentication => "plain",
-    :domain => 'mail.silumin.co',
     :enable_starttls_auto => true
   }
   # config.action_mailer.delivery_method = :mailgun
